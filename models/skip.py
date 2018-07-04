@@ -46,7 +46,7 @@ def skip(
 
         deeper = nn.Sequential()
         skip = nn.Sequential()
-        model_tmp.add(nn.Dropout(0.3))
+        # model_tmp.add(nn.Dropout(0.3))
 
         if num_channels_skip[i] != 0:
             model_tmp.add(Concat(1, skip, deeper))
