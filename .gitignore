@@ -2,3 +2,4 @@ raw_imgs
 data
 data.zip
 .ipynb_checkpoints
+*/__pycache__
