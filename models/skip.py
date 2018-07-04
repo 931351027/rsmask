@@ -46,7 +46,7 @@ def skip(
 
         deeper = nn.Sequential()
         skip = nn.Sequential()
-        # model_tmp.add(nn.Dropout(0.3))
+        model_tmp.add(nn.Dropout(0.01))
 
         if num_channels_skip[i] != 0:
             model_tmp.add(Concat(1, skip, deeper))
@@ -96,6 +96,6 @@ def skip(
 
     model.add(conv(num_channels_up[0], num_output_channels, 1, bias=need_bias, pad=pad))
     if need_sigmoid:
-        model.add(nn.Sigmoid())
+        model.add(nn.Tanh())
 
     return model
